@@ -1,0 +1,20 @@
+var Expression = require('./expression');
+
+console.log(new Expression(5, 'eq', 5).evaluate());
+console.log(new Expression(5, 'eq', 6).evaluate() === false);
+console.log(new Expression(6, 'eq', 5).evaluate() === false);
+console.log(new Expression(5, 'ne', 5).evaluate() === false);
+console.log(new Expression(5, 'ne', 6).evaluate());
+console.log(new Expression(6, 'ne', 5).evaluate());
+console.log(new Expression(5, 'gt', 5).evaluate() === false);
+console.log(new Expression(5, 'gt', 6).evaluate() === false);
+console.log(new Expression(6, 'gt', 5).evaluate());
+console.log(new Expression(5, 'lt', 5).evaluate() === false);
+console.log(new Expression(5, 'lt', 6).evaluate());
+console.log(new Expression(6, 'lt', 5).evaluate() === false);
+console.log(new Expression(5, 'ge', 5).evaluate());
+console.log(new Expression(5, 'ge', 6).evaluate() === false);
+console.log(new Expression(6, 'ge', 5).evaluate());
+console.log(new Expression(5, 'le', 5).evaluate());
+console.log(new Expression(5, 'le', 6).evaluate());
+console.log(new Expression(6, 'le', 5).evaluate() === false);
