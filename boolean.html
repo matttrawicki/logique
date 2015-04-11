@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<form>
+			<input name="input1" value="0">
+			<input name="input2" value="0">
+			<button type="button" onclick="not()">NOT</button>
+			<button type="button" onclick="and()">AND</button>
+			<button type="button" onclick="or()">OR</button>
+			<button type="button" onclick="xor()">XOR</button>
+			<button type="button" onclick="nand()">NAND</button>
+			<button type="button" onclick="nor()">NOR</button>
+			<output name="result"></output>
+		</form>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script>
+			var input1 = $('input[name=input1]');
+			var input2 = $('input[name=input2]');
+			var output = $('output[name=result]');
+
+			function not() {
+				output.val(Number(!input1.val()));
+			}
+
+			function and() {
+				output.val(Number(input1.val() & input2.val()));
+			}
+
+			function or() {
+				output.val(Number(input1.val() | input2.val()));
+			}
+
+			function xor() {
+				output.val(Number(input1.val() ^ input2.val()));
+			}
+
+			function nand() {
+				output.val(Number(!(input1.val() & input2.val())));
+			}
+
+			function nor() {
+				output.val(Number(!(input1.val() | input2.val())));
+			}
+		</script>
+	</body>
+</html>
